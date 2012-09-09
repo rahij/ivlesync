@@ -61,7 +61,7 @@ include 'constants.php';
             }
                          
         });
-    $('body').append("<a href='test.php'>Click here after all your classes are populated</a>");
+    $('body').append("<a href='test.php'>Click here to add to calendar after all your classes are populated</a>");
     }
 
 

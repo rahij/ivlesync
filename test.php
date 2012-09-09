@@ -7,7 +7,7 @@ require_once 'apiClient.php';
 require_once 'apiCalendarService.php';
 
 session_start();
-echo "<pre>";print_r($_SESSION);echo "</pre>";exit; 
+ 
 $client = new apiClient();
 $client->setApplicationName("NUS Timetable Sync");
 $client->setClientId($clientId);
@@ -33,22 +33,32 @@ if (isset($_GET['code'])) {
 if (isset($_SESSION['token'])) {
   $client->setAccessToken($_SESSION['token']);
 }
-echo "<pre>";print_r($_SESSION);echo "</pre>"; 
+
 if ($client->getAccessToken()) {
+	$counter=0;
   foreach($_SESSION['modules'] as $module)
   {
+  	if($counter>0) 
+  		break;
   	$event = new Event();
 		$event->setSummary($module['module_code']." ".$module['ltype']);
 		$event->setLocation($module['venue']);
 		$start = new EventDateTime();
-		$start->setDateTime('2012-05-03T10:00:00.000+08:00');
+		
+		$start_date_reference=array("Monday"=> 13,"Tuesday"=>14,"Wednesday"=>15,"Thursday"=>16,"Friday"=>17,"Saturday"=>18,"Sunday"=>19);
+		$start_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['startTime'][0].$module['startTime'][1].':00:00.000+08:00';
+		
+		$start->setDateTime($start_string);
+		
 		$start->setTimeZone('Asia/Singapore');
 		$event->setStart($start);
+		
 		$end = new EventDateTime();
-		$end->setDateTime('2012-05-03T10:25:00.000+08:00');
+		$end_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['endTime'][0].$module['endTime'][1].':00:00.000+08:00';
+		$end->setDateTime($end_string);
 		$end->setTimeZone('Asia/Singapore');
 		$event->setEnd($end);
-		$event->setRecurrence(array('RRULE:FREQ=WEEKLY;UNTIL=20120525T000000Z;'));
+		$event->setRecurrence(array('RRULE:FREQ=WEEKLY;UNTIL=20121117T000000Z;'));
 		$createdEvent = $cal->events->insert('primary', $event);
 		echo "Event Created";
 	}
