@@ -60,12 +60,13 @@ if ($client->getAccessToken()) {
 	}
 unset($_SESSION['module']);
 unset($_SESSION['lessons_counter']);
+echo "Events added successfully!";
 $_SESSION['token'] = $client->getAccessToken();
 } 
 
 else {
   $authUrl = $client->createAuthUrl();
-  print "<a class='login' href='$authUrl'>Login</a>";
+  print "Please<a class='login' href='$authUrl'>Login</a>to google to authorize this app";
 }
 
 
