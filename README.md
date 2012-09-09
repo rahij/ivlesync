@@ -21,5 +21,5 @@ var APIKey="your_ivle_lapi_key";
 
 Starting dates for the first lesons are defined in test.php...(This is where the calendar sync takes place- forgive the poor file naming :p). This should change depending upon the current semester.
 
-Cheers
+Cheers,<br />
 Rahij!
