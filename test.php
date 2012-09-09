@@ -35,11 +35,8 @@ if (isset($_SESSION['token'])) {
 }
 
 if ($client->getAccessToken()) {
-	$counter=0;
   foreach($_SESSION['modules'] as $module)
   {
-  	if($counter>0) 
-  		break;
   	$event = new Event();
 		$event->setSummary($module['module_code']." ".$module['ltype']);
 		$event->setLocation($module['venue']);
@@ -60,7 +57,6 @@ if ($client->getAccessToken()) {
 		$event->setEnd($end);
 		$event->setRecurrence(array('RRULE:FREQ=WEEKLY;UNTIL=20121117T000000Z;'));
 		$createdEvent = $cal->events->insert('primary', $event);
-		echo "Event Created";
 	}
 unset($_SESSION['module']);
 unset($_SESSION['lessons_counter']);
