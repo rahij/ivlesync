@@ -9,11 +9,11 @@ Enable Calendar Access to your Google API Developer Console. Configure your call
 
 This is a web application. Copy them to your localhost/server and create constants.php in your project directory of the format:
 
-<?php
-$developerKey='google_api_developer_key';
-$clientId='google_api_client_id';
-$clientSecret='google_api_client_secret';
-?>
+<?php<br />
+$developerKey='google_api_developer_key';<br />
+$clientId='google_api_client_id';<br />
+$clientSecret='google_api_client_secret';<br />
+?><br />
 
 [open script tag]
 var APIKey="your_ivle_lapi_key";
