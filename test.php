@@ -43,7 +43,7 @@ if ($client->getAccessToken()) {
 		$start = new EventDateTime();
 		
 		$start_date_reference=array("Monday"=> 13,"Tuesday"=>14,"Wednesday"=>15,"Thursday"=>16,"Friday"=>17,"Saturday"=>18,"Sunday"=>19);
-		$start_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['startTime'][0].$module['startTime'][1].':00:00.000+08:00';
+		$start_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['startTime'][0].$module['startTime'][1].':'.$module['startTime'][2].$module['startTime'][3].':00.000+08:00';
 		
 		$start->setDateTime($start_string);
 		
@@ -51,7 +51,7 @@ if ($client->getAccessToken()) {
 		$event->setStart($start);
 		
 		$end = new EventDateTime();
-		$end_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['endTime'][0].$module['endTime'][1].':00:00.000+08:00';
+		$end_string='2012-08-'.$start_date_reference[$module['day_text']].'T'.$module['endTime'][0].$module['endTime'][1].':'.$module['endTime'][2].$module['endTime'][3].':00.000+08:00';
 		$end->setDateTime($end_string);
 		$end->setTimeZone('Asia/Singapore');
 		$event->setEnd($end);
