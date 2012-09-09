@@ -7,7 +7,7 @@ Enable Calendar Access to your Google API Developer Console. Configure your call
 
 <h2>Building:</h2>
 
-This is a web application. Copy them to your localhost/server and create constants.php in your project directory of the format:
+This is a web application. Copy them to your localhost/server and EDIT "constants.php" in your project directory of the format:
 
 <?php<br />
 $developerKey='google_api_developer_key';<br />

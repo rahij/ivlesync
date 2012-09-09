@@ -1,9 +1,9 @@
 <?php
-$developerKey='google_api_developer_key';
-$clientId='google_api_client_id';
-$clientSecret='google_api_client_secret';
+$developerKey='AIzaSyDtRxIUq_D8Pp0usWQ9rzqZvKEYy02ubnY';
+$clientId='253590999479.apps.googleusercontent.com';
+$clientSecret='CVS5ZM83ji-d3a5fCMzMEBSP';
 ?>
 
 <script type="text/javascript">
-var APIKey="your_ivle_lapi_key";
+var APIKey="ihGIAwinPHivcEbzy7XE2";
 </script>
