@@ -19,7 +19,7 @@ $clientSecret='google_api_client_secret';<br />
 var APIKey="your_ivle_lapi_key";
 [close script tag]
 
-Starting dates for the first lesons are defined in test.php...(This is where the calendar sync takes place- forgive the poor file naming :p). This should change depending upon the current semester.
+Starting dates for the first lesons are defined in test.php...(This is where the calendar sync takes place- forgive me for the poor file naming :p). This should be changed depending upon the current semester.
 
 Cheers,<br />
 Rahij!
