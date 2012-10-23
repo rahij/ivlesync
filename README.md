@@ -21,7 +21,7 @@ This is a web application. Copy them to your localhost/server and EDIT "constant
     </script>
 </code>
 
-Starting dates for the first lesons are defined in test.php...(This is where the calendar sync takes place- forgive me for the poor file naming :p). This should be changed depending upon the current semester.
+Starting dates for the first lesons are defined in addToCalendar.php...(This is where the calendar sync takes place. This should be changed depending upon the current semester.
 
 Cheers,<br />
 Rahij!
