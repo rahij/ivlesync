@@ -10,15 +10,15 @@ Enable Calendar Access to your Google API Developer Console. Configure your call
 This is a web application. Copy them to your localhost/server and EDIT "constants.php" in your project directory of the format:
 
 <code>
-<?php<br />
-$developerKey='google_api_developer_key';<br />
-$clientId='google_api_client_id';<br />
-$clientSecret='google_api_client_secret';<br />
-?><br />
+    <?php<br />
+        $developerKey='google_api_developer_key';<br />
+        $clientId='google_api_client_id';<br />
+        $clientSecret='google_api_client_secret';<br />
+    ?><br />
 
-[open script tag]
-var APIKey="your_ivle_lapi_key";
-[close script tag]
+    <script>
+        var APIKey="your_ivle_lapi_key";
+    </script>
 </code>
 
 Starting dates for the first lesons are defined in test.php...(This is where the calendar sync takes place- forgive me for the poor file naming :p). This should be changed depending upon the current semester.
